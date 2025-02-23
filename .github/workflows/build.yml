@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Gradle
-        uses: GeyserMC/actions/setup-gradle-composite@master
+        uses: gradle/actions/setup-gradle@v3
         with:
           setup-java_java-version: 21
 
