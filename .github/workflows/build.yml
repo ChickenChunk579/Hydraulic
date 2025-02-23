@@ -15,13 +15,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v4
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
           setup-java_java-version: 21
 
       - name: Build Hydraulic
-        run: ./gradlew build
+        run: gradle build
 
       - name: Archive Artifacts
         uses: GeyserMC/actions/upload-multi-artifact@master
